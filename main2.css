@@ -1,3 +1,53 @@
 button{
     margin-bottom: 1000px;
 }
+
+html{
+	height: 100%;
+}
+
+body{
+	background-image: url("background.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	height: 100%;
+}
+
+.header{
+	text-align: center;
+	font-size: 50px;
+	font-style: italic;
+	font-family: serif;
+	color: #333333;
+	background-color: #f1f1f1;
+	border-style: solid;
+	border-bottom-width: 3px;
+	border-color: #f1f1f1;
+	border-bottom-color: #dddddd;
+	position: fixed;
+	width: 100%;
+}
+
+.button{
+	width: 500px;
+	margin: auto;
+}
+
+.buttontext{
+	margin: 0;
+	padding: 0;
+	font-size: 30px;
+}
+
+.table{
+	margin: auto;
+}
+
+.headerspace{
+	height: 150px;
+}
+
+.testspace{
+	height: 100%;
+}
