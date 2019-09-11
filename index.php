@@ -23,14 +23,13 @@
       $password = "geheim!";
       $db = "kastje";
 
-      $dbconnect=mysqli_connect($hostname,$username,$password,$db);
+      $dbconnect=mysql_connect($hostname,$username,$password,$db);
 
       if ($dbconnect->connect_error) {
         die("Database connection failed: " . $dbconnect->connect_error);
       }
 
       ?>
-
       <table border="1" align="center">
       <tr>
         <td>ID</td>
@@ -39,9 +38,9 @@
 
       <?php
 
-      $query = mysqli_query($dbconnect, "SELECT * FROM history")
+      $query = mysql_query($dbconnect, "SELECT * FROM history")
 
-      while ($row = mysqli_fetch_array($query)) {
+      while ($row = mysql_fetch_array($query)) {
         echo
          "<tr>
           <td>{$row['id']}</td>
