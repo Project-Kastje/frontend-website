@@ -36,14 +36,6 @@
 		echo($table[0]. "<br>");
 		 ?>
    </div>
-   <?php
-/**
- * Created by PhpStorm.
- * User: Daan
- * Date: 9-9-2019
- * Time: 12:53
- */
-?>
 	<div class="testspace">
 	</div>
 </body>
