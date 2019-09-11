@@ -16,8 +16,7 @@
 			<p class="buttontext">Thuis</p>
 		</button>
     </div>
-	<br>
-    <div id="PHP">
+	<br
     <?php
 	$hostname = "localhost";
 	$username = "backend-service";
@@ -29,7 +28,6 @@
 	if(dbconnect->connect_error) {
 		die("Database connection failed: " . $dbconnect->connect_error);
 	}
-<<<<<<< HEAD
 ?>
 	<table border="1" align="center">
 	<tr>
@@ -46,15 +44,12 @@
 		<td>{$row['tijd']}</td>
 		</tr>\n";
 	}
-	?>
-=======
+	
 	$showtables=mysql_query($sql);
 	while($table = mysql_fetch_array($showtables)){
 		echo($table[0]. "<br>");
 		 ?>
-   </div>
 	<div class="testspace">
 	</div>
->>>>>>> refs/remotes/origin/master
 </body>
 </html>
