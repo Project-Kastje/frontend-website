@@ -2,7 +2,7 @@
 <html>
 <head>
     <title> Job's Keukenkastje </title>
-    <meta http-equiv="refresh" content="5">
+    <meta http-equiv="refresh" content="10000">
     <link rel="stylesheet" href="main2.css" type="text/css">
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
@@ -44,7 +44,7 @@
 		<td>{$row['tijd']}</td>
 		</tr>\n";
 	}
-	
+
 	$showtables=mysql_query($sql);
 	while($table = mysql_fetch_array($showtables)){
 		echo($table[0]. "<br>");
