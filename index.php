@@ -12,33 +12,31 @@
     </div>
 	<div class="headerspace"></div>
 	<div class="button">
-		<button type="button" class="btn-lg btn-block btn-danger">
+		<button type="button" class="btn-lg btn-block btn-danger" id="thuis">
 			<p class="buttontext">Thuis</p>
 		</button>
     </div>
 	<br>
     <br>
-    <div class="table">
-		<table class="table table-striped table-bordered">
-			<thead>
-				<tr>
-					<th>Tijd</th>
-					<th>Datum</th>
-				</tr>
-			</thead>
-			<tr>
-				<td>14:02</td>
-				<td>20-4-2018</td>
-			</tr>
-			<tr>
-	
-			</tr>
-			<tr>
-
-			</tr>
-		</table>
-	</div>
-    <?php
+    <div> <?php
+	/*variabelen*/
+	$dbname = 'kastje';
+	$dbuser = 'backend-service';
+	$dbpass = 'geheim!';
+	$dbhost = 'localhost';
+	/* sql code*/
+	$sql = "SELECT * FROM `history` WHERE 1";
+	/*check of er connectie is met de database*/
+	$connection = mysql_connect($dbhost, $dbuser, $dbpass);
+	if(!connection){
+		die('could not connect'. mysql_error());
+	}
+	$showtables=mysql_query($sql);
+	while($table = mysql_fetch_array($showtables)){
+		echo($table[0]. "<br>");
+		 ?>
+   </div>
+   <?php
 /**
  * Created by PhpStorm.
  * User: Daan
