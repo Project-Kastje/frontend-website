@@ -22,7 +22,7 @@
       $password = "geheim!";
       $db = "kastje";
 
-      $dbconnect=mysql_connect($hostname,$username,$password,$db);
+      $dbconnect=mysqli($hostname,$username,$password,$db);
 
       if ($dbconnect->connect_error) {
         die("Database connection failed: " . $dbconnect->connect_error);
@@ -42,8 +42,8 @@
       while ($row = mysql_fetch_array($query)) {
         echo
          "<tr>
-          <td>ID</td>
-          <td>Prijs</td>
+          <td>1</td>
+          <td>11-09-2019 14:09:54</td>
          </tr>\n";
       }
 
