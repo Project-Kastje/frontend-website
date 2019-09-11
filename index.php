@@ -16,40 +16,43 @@
 			<p class="buttontext">Thuis</p>
 		</button>
     </div>
-	<br>
-    <?php
-	$hostname = "localhost";
-	$username = "backend-service";
-	$password = "geheim!";
-	$db = "kastje";
+    <div>
+      <?php
+      $hostname = "localhost";
+      $username = "backend-service";
+      $password = "geheim!";
+      $db = "kastje";
 
-	$dbconnect=mysqli_connect($hostname,$username,$password,$db);
+      $dbconnect=mysqli_connect($hostname,$username,$password,$db);
 
-	if(dbconnect->connect_error) {
-		die("Database connection failed: " . $dbconnect->connect_error);
-	}
-?>
-	<table border="1" align="center">
-	<tr>
-	<td>ID</td>
-	<td>Tijd</td>
-	</tr>
-<?php
-	$query = mysqli_query($dbconnect, "SELECT * FROM history")
-		or die (mysqli_error($dbconnect));
+      if ($dbconnect->connect_error) {
+        die("Database connection failed: " . $dbconnect->connect_error);
+      }
 
-	while ($row = mysqli_fetch_array($query)) {
-	echo "<tr>
-		<td>{$row['id']}</td>
-		<td>{$row['tijd']}</td>
-		</tr>\n";
-	}
+      ?>
 
-	$showtables=mysql_query($sql);
-	while($table = mysql_fetch_array($showtables)){
-		echo($table[0]. "<br>");
-		 ?>
-	<div class="testspace">
-	</div>
+      <table border="1" align="center">
+      <tr>
+        <td>ID</td>
+        <td>Tijd</td>
+      </tr>
+
+      <?php
+
+      $query = mysqli_query($dbconnect, "SELECT * FROM history")
+         or die (mysqli_error($dbconnect));
+
+      while ($row = mysqli_fetch_array($query)) {
+        echo
+         "<tr>
+          <td>{$row['id']}</td>
+          <td>{$row['prijs']}</td>
+         </tr>\n";
+
+      }
+
+      ?>
+</table>
+      </div
 </body>
 </html>
