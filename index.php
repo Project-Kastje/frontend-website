@@ -17,34 +17,34 @@
 		</button>
     </div>
 	<br>
-    <br>
-    <div> <?php
-	/*variabelen*/
-	$dbname = 'kastje';
-	$dbuser = 'backend-service';
-	$dbpass = 'geheim!';
-	$dbhost = 'localhost';
-	/* sql code*/
-	$sql = "SELECT * FROM `history` WHERE 1";
-	/*check of er connectie is met de database*/
-	$connection = mysql_connect($dbhost, $dbuser, $dbpass);
-	if(!connection){
-		die('could not connect'. mysql_error());
+    <div id="PHP">
+    <?php
+	$hostname = "localhost";
+	$username = "backend-service";
+	$password = "geheim!";
+	$db = "kastje";
+
+	$dbconnect=mysqli_connect($hostname,$username,$password,$db);
+
+	if(dbconnect->connect_error) {
+		die("Database connection failed: " . $dbconnect->connect_error);
 	}
-	$showtables=mysql_query($sql);
-	while($table = mysql_fetch_array($showtables)){
-		echo($table[0]. "<br>");
-		 ?>
-   </div>
-   <?php
-/**
- * Created by PhpStorm.
- * User: Daan
- * Date: 9-9-2019
- * Time: 12:53
- */
 ?>
-	<div class="testspace">
-	</div>
+	<table border="1" align="center">
+	<tr>
+	<td>ID</td>
+	<td>Tijd</td>
+	</tr>
+<?php
+	$query = mysqli_query($dbconnect, "SELECT * FROM history")
+		or die (mysqli_error($dbconnect));
+
+	while ($row = mysqli_fetch_array($query)) {
+	echo "<tr>
+		<td>{$row['id']}</td>
+		<td>{$row['tijd']}</td>
+		</tr>\n";
+	}
+	?>
 </body>
 </html>
