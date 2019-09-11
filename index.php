@@ -18,9 +18,9 @@
     </div>
     <?php
     $servername = "localhost";
-    $username = "username";
-    $password = "password";
-    $db = "dbname";
+    $username = "backend-service";
+    $password = "geheim!";
+    $db = "kastje";
     try {
        $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password, $db);
        // set the PDO error mode to exception
