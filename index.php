@@ -29,6 +29,7 @@
 	if(dbconnect->connect_error) {
 		die("Database connection failed: " . $dbconnect->connect_error);
 	}
+<<<<<<< HEAD
 ?>
 	<table border="1" align="center">
 	<tr>
@@ -46,5 +47,14 @@
 		</tr>\n";
 	}
 	?>
+=======
+	$showtables=mysql_query($sql);
+	while($table = mysql_fetch_array($showtables)){
+		echo($table[0]. "<br>");
+		 ?>
+   </div>
+	<div class="testspace">
+	</div>
+>>>>>>> refs/remotes/origin/master
 </body>
 </html>
