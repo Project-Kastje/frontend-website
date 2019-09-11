@@ -16,7 +16,6 @@
 			<p class="buttontext">Thuis</p>
 		</button>
     </div>
-    <div>
       <?php
       $hostname = "localhost";
       $username = "backend-service";
@@ -51,6 +50,6 @@
 
       ?>
 </table>
-      </div
+      
 </body>
 </html>
