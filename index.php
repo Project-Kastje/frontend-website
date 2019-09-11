@@ -16,38 +16,22 @@
 			<p class="buttontext">Thuis</p>
 		</button>
     </div>
-      <?php
-      $hostname = "localhost";
-      $username = "backend-service";
-      $password = "geheim!";
-      $db = "kastje";
-
-      $dbconnect=mysqli($hostname,$username,$password,$db);
-
-      if ($dbconnect->connect_error) {
-        die("Database connection failed: " . $dbconnect->connect_error);
-      }
-
-      ?>
-      <table border="1" align="center">
-      <tr>
-        <td>ID</td>
-        <td>Tijd</td>
-      </tr>
-
-      <?php
-
-      $query = mysql_query($dbconnect, "SELECT * FROM history")
-
-      while ($row = mysql_fetch_array($query)) {
-        echo
-         "<tr>
-          <td>1</td>
-          <td>11-09-2019 14:09:54</td>
-         </tr>\n";
-      }
-
-      ?>
+    <?php
+    $servername = "localhost";
+    $username = "username";
+    $password = "password";
+    $db = "dbname";
+    try {
+       $conn = new PDO("mysql:host=$servername;dbname=myDB", $username, $password, $db);
+       // set the PDO error mode to exception
+       $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+       echo "Connected successfully";
+       }
+    catch(PDOException $e)
+       {
+       echo "Connection failed: " . $e->getMessage();
+       }
+    ?>
 </table>
 
 </body>
