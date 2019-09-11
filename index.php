@@ -16,7 +16,7 @@
 			<p class="buttontext">Thuis</p>
 		</button>
     </div>
-	<br
+	<br>
     <?php
 	$hostname = "localhost";
 	$username = "backend-service";
