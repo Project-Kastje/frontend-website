@@ -2,7 +2,7 @@
 <html>
 <head>
     <title> Job's Keukenkastje </title>
-    !--<meta http-equiv="refresh" content="1000">
+    <!--<meta http-equiv="refresh" content="1000">-->
     <link rel="stylesheet" href="main2.css" type="text/css">
     <link rel="stylesheet" href="bootstrap.min.css">
 </head>
@@ -25,7 +25,7 @@
       exit;
   }
 
-  $sql = "SELECT * FROM history WHERE 1";
+  $sql = "SELECT * FROM history";
   $result = mysqli_query($con,$sql);
 
   if (!$result) {
