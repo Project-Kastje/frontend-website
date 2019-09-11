@@ -4,7 +4,11 @@
     <title> Job's Keukenkastje </title>
     !--<meta http-equiv="refresh" content="1000">
     <link rel="stylesheet" href="main2.css" type="text/css">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+  </style>
 </head>
 <body>
 	<div class="header">
@@ -17,6 +21,11 @@
 		</button>
     </div>
 	<br>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Tijd</th>
+    </tr>
   <?php
   $dbname = 'kastje';
   $con = mysqli_connect('localhost', 'backend-service','geheim!', 'kastje');
@@ -35,10 +44,10 @@
 }
 
 while ($row = mysqli_fetch_row($result)) {
-    echo "ID: {$row[0]}\n";
-    echo "Tijd: {$row[1]}\n";
+    echo "<tr><td>ID: {$row[0]}\n</td>";
+    echo "<td>Tijd: {$row[1]}\n<td></tr>";
 }
   ?>
-
+</table>
 </body>
 </html>
