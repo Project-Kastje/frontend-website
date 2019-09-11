@@ -42,14 +42,13 @@
       while ($row = mysql_fetch_array($query)) {
         echo
          "<tr>
-          <td>{$row['id']}</td>
-          <td>{$row['prijs']}</td>
+          <td>ID</td>
+          <td>Prijs</td>
          </tr>\n";
-
       }
 
       ?>
 </table>
-      
+
 </body>
 </html>
