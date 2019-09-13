@@ -4,7 +4,12 @@
     <title> Job's Keukenkastje </title>
     <!--<meta http-equiv="refresh" content="1000">-->
     <link rel="stylesheet" href="main2.css" type="text/css">
-    <link rel="stylesheet" href="bootstrap.min.css">  
+    <style>
+    table, th, td {
+    border: 1px solid black;
+    }
+  </style>
+    </style>
 </head>
 <body>
 	<div class="header">
@@ -15,8 +20,8 @@
 		<button type="button" class="btn-lg btn-block btn-danger" id="thuis">
 			<p class="buttontext">Thuis</p>
 		</button>
-    </div>
-	<br>
+  </div>
+	<div>
   <table>
     <tr>
       <th>ID</th>
@@ -45,5 +50,6 @@ while ($row = mysqli_fetch_row($result)) {
 }
   ?>
 </table>
+</div>
 </body>
 </html>
