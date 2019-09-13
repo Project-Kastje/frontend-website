@@ -4,11 +4,6 @@
     <title> Job's Keukenkastje </title>
     <!--<meta http-equiv="refresh" content="1000">-->
     <link rel="stylesheet" href="main2.css" type="text/css">
-    <style>
-    table, th, td {
-    border: 1px solid black;
-    }
-  </style>
     </style>
 </head>
 <body>
