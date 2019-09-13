@@ -4,7 +4,7 @@
     <title> Job's Keukenkastje </title>
     <!--<meta http-equiv="refresh" content="1000">-->
     <link rel="stylesheet" href="main2.css" type="text/css">
-  
+    <link rel="stylesheet" href="bootstrap.min.css">  
 </head>
 <body>
 	<div class="header">
