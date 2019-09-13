@@ -11,13 +11,6 @@
 		<p>Job's keukenkastje</p>
     </div>
 	<div class="headerspace"></div>
-<<<<<<< HEAD
-=======
-	<div class="button">
-		<button onclick="button()" type="button" class="btn-lg btn-block btn-danger" id="thuis">
-			<p id="buttontext">Thuis</p>
-		</button>
-  </div>
 <?php
     $servername = "localhost";
     $username = "backend-service";
