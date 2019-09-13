@@ -39,14 +39,8 @@
 		document.getElementById("thuis").style.backgroundColor = "red";
 	}
     </script>
-	<div>
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Tijd</th>
-    </tr>
+
 <?php
-    echo("Hello World!");
     $servername = "localhost";
     $username = "backend-service";
     $password = "geheim!";
@@ -61,8 +55,23 @@
     } catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
     }
-?>
+    $sql = 'SELECT id,tijd FROM history';
+    $q = $conn->query($sql);
+    $q -> setFetchMode(PDO::FETCH_ASSOC);
 
+?>
+<div>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Tijd</th>
+  </tr>
+  <?php while ($r = $q->fetch()): ?>
+    <tr>
+      <td><?php echo htmlspecialchars($r['id']) ?></td>
+      <td><?php echo htmlspecialchars($r['tijd']) ?></td>
+    </tr>
+  <?php endwhile; ?>
   </table>
   </div>
 </body>
