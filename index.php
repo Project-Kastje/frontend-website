@@ -2,7 +2,7 @@
 <html>
 <head>
     <title> Job's Keukenkastje </title>
-    <!--<meta http-equiv="refresh" content="1000">-->
+    <meta http-equiv="refresh" content="4">
     <link rel="stylesheet" href="main2.css" type="text/css">
     </style>
     <script>
