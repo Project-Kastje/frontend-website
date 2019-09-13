@@ -26,7 +26,7 @@
   $dbname = 'kastje';
   $con = mysqli_connect('localhost', 'backend-service','geheim!', 'kastje');
   if (!$con) {
-      echo 'Could not connect to mysql';
+      error_log('Could not connect to mysql');
       exit;
   }
 
@@ -34,14 +34,14 @@
   $result = mysqli_query($con,$sql);
 
   if (!$result) {
-    echo "DB Error, could not list tables\n";
-    echo 'MySQL Error: ' . mysqli_error();
+    error_log("DB Error, could not list tables\n");
+    error_log('MySQL Error: ' . mysqli_error());
     exit;
 }
 
 while ($row = mysqli_fetch_row($result)) {
-    echo "<tr><td>ID: {$row[0]}\n</td>";
-    echo "<td>Tijd: {$row[1]}\n<td></tr>";
+    error_log("<tr><td>ID: {$row[0]}\n</td>");
+    error_log("<td>Tijd: {$row[1]}\n<td></tr>");
 }
   ?>
 </table>
