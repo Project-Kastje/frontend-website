@@ -45,29 +45,25 @@
       <th>ID</th>
       <th>Tijd</th>
     </tr>
-  <?php
-  $dbname = 'kastje';
-  $con = mysqli_connect('localhost', 'backend-service','geheim!', 'kastje');
-  if (!$con) {
-      error_log('Could not connect to mysql');
-      exit;
-  }
+<?php
+    echo("Hello World!");
+    $servername = "localhost";
+    $username = "backend-service";
+    $password = "geheim!";
+    $db = "kastje";
+    try {
+        echo("2");
+        $conn = new PDO("mysql:host=$servername;dbname=kastje", $username, $password);
+        echo("3");
+        // set the PDO error mode to exception
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        echo "Connected successfully";
+    } catch(PDOException $e) {
+        echo "Connection failed: " . $e->getMessage();
+    }
+?>
 
-  $sql = "SELECT * FROM history";
-  $result = mysqli_query($con,$sql);
-
-  if (!$result) {
-    error_log("DB Error, could not list tables\n");
-    error_log('MySQL Error: ' . mysqli_error());
-    exit;
-}
-
-while ($row = mysqli_fetch_row($result)) {
-    echo("<tr><td>ID: {$row[0]}\n</td>");
-    echo("<td>Tijd: {$row[1]}\n<td></tr>");
-}
-  ?>
-</table>
-</div>
+  </table>
+  </div>
 </body>
 </html>
