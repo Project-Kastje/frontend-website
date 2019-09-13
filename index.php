@@ -5,6 +5,20 @@
     <!--<meta http-equiv="refresh" content="1000">-->
     <link rel="stylesheet" href="main2.css" type="text/css">
     </style>
+    <script>
+	var alarm = 0;
+	function button() {
+		if (alarm == 1) {
+			alarm = 0;
+			document.getElementById("buttontext").innerHTML = "Thuis";
+			document.getElementById("thuis").style.backgroundColor = "green";
+		} else {
+			alarm = 1;
+			document.getElementById("buttontext").innerHTML = "Weg";
+			document.getElementById("thuis").style.backgroundColor = "red";
+		}
+	}
+    </script>
 </head>
 <body>
 	<div class="header">
@@ -12,10 +26,19 @@
     </div>
 	<div class="headerspace"></div>
 	<div class="button">
-		<button type="button" class="btn-lg btn-block btn-danger" id="thuis">
-			<p class="buttontext">Thuis</p>
+		<button onclick="button()" type="button" class="btn-lg btn-block btn-danger" id="thuis">
+			<p id="buttontext">Thuis</p>
 		</button>
   </div>
+  <script>
+	if (alarm == 0) {
+		document.getElementById("buttontext").innerHTML = "Thuis";
+		document.getElementById("thuis").style.backgroundColor = "green";
+	} else {
+		document.getElementById("buttontext").innerHTML = "Weg";
+		document.getElementById("thuis").style.backgroundColor = "red";
+	}
+    </script>
 	<div>
   <table>
     <tr>
