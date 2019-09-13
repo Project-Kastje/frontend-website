@@ -27,7 +27,7 @@
 	<div class="headerspace"></div>
 	<div class="button">
 		<button onclick="button()" type="button" class="btn-lg btn-block btn-danger" id="thuis">
-			<p class="buttontext">Thuis</p>
+			<p id="buttontext">Thuis</p>
 		</button>
   </div>
   <script>
