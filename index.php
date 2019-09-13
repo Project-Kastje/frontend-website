@@ -63,8 +63,8 @@
 }
 
 while ($row = mysqli_fetch_row($result)) {
-    error_log("<tr><td>ID: {$row[0]}\n</td>");
-    error_log("<td>Tijd: {$row[1]}\n<td></tr>");
+    echo("<tr><td>ID: {$row[0]}\n</td>");
+    echo("<td>Tijd: {$row[1]}\n<td></tr>");
 }
   ?>
 </table>
